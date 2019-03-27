@@ -15,18 +15,21 @@
     <script type="text/javascript">
       /* All of our JavaScript code will go here */
       document.getElementById("testParagraph").style.color = "blue";
+      //chnages first paragrapgh color to blue
 
       document.querySelectorAll("p.sampleClass")[0].innerText =
         "My text was changed!";
+      //changes text in first p.class
 
       console.log(document.getElementById("testParagraph").style.color);
+      //prints in console the name of the color that was applied to the change
 
       console.log(document.querySelectorAll("p.sampleClass"));
 
       document.querySelectorAll("p.sampleClass")[0].innerHTML =
-        "<span>I am a whole new element!</span>";
+        "<span>I am a whole new element!</span>"; //adds whole new element to the page
       document.querySelectorAll("p.sampleClass")[0].innerHTML =
-        "<span>deleted</span>";
+        "<span>deleted</span>"; //same as above
 
       /*innerText will only reference the text displayed on the screen.
         innerHTML will reference all HTML elements inside the tag. 

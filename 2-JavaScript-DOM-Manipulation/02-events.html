@@ -17,17 +17,17 @@
         .getElementById("clickThisButton")
         .addEventListener("click", () => {
           console.log("I was clicked!");
-        });
+        }); //prints in cosole that button was clicked
       document
         .getElementById("clickThisButton")
         .addEventListener("click", details => {
-          console.log(details);
+          console.log(details); //prints all details of the mouse click
         });
       document
         .getElementById("clickThisButton")
         .addEventListener("click", details => {
           details.target.style.backgroundColor = "red";
-        });
+        }); //changes background of the button to red
     </script>
   </body>
 </html>
