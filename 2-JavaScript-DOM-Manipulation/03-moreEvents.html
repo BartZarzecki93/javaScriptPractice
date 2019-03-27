@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="nameInput">Enter Your Name:</label>
+    <input type="text" id="nameInput" placeholder="John Smith" />
+
+    <p>Welcome!</p>
+    <p>No name has been entered</p>
+
+    <button id="clickThisButton">I want to be clicked</button>
+
+    <script type="text/javascript">
+      /* All of our JavaScript code will go here */
+      document
+        .getElementById("clickThisButton")
+        .addEventListener("click", details => {
+          details.target.style.backgroundColor = "red";
+        }); //button will change to color to red
+
+      document
+        .getElementById("clickThisButton")
+        .addEventListener("click", details => {
+          document.body.style.backgroundColor = "blue";
+        }); //changing background of the whole body to blue
+
+      document
+        .getElementById("clickThisButton")
+        .addEventListener("click", detials => {
+          document.getElementsByTagName("p")[0].style.color = "Yellow";
+        }); //changes the 1st paragraph letter colors to yellow
+
+      document.getElementById("nameInput").addEventListener("keyup", event => {
+        console.log(event);
+      });
+      document.getElementById("nameInput").addEventListener("keyup", event => {
+        console.log(event.target.value); //prints all the letters enetered
+        console.log(document.getElementsByTagName("p")); //its getting results but Tag name
+      });
+      document.getElementById("nameInput").addEventListener("keyup", event => {
+        document.getElementsByTagName(
+          "p"
+        )[1].innerText = `Everyone please welcome ${
+          event.target.value
+        } to the stage.`;
+      }); //creates the new text and is inserted in the pargarapgh 2 with the value from the entry form
+      document.getElementById("nameInput").addEventListener("keyup", event => {
+        if (event.target.value === "") {
+          document.getElementsByTagName(
+            "p"
+          )[1].innerText = `No name has been entered`;
+        } else {
+          document.getElementsByTagName(
+            "p"
+          )[1].innerText = `Everyone please welcome ${
+            event.target.value
+          } to the stage.`;
+        }
+      }); //if its empty it will go back to previous version of that paragraph
+    </script>
+  </body>
+</html>

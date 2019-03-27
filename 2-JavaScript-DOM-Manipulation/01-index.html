@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p id="testParagraph">sample text</p>
+    <p class="sampleClass">This paragraph has a class of 'sampleClass'</p>
+    <p class="sampleClass1">This new paragraph has a class of 'sampleClass1'</p>
+
+    <script type="text/javascript">
+      /* All of our JavaScript code will go here */
+      document.getElementById("testParagraph").style.color = "blue";
+
+      document.querySelectorAll("p.sampleClass")[0].innerText =
+        "My text was changed!";
+
+      console.log(document.getElementById("testParagraph").style.color);
+
+      console.log(document.querySelectorAll("p.sampleClass"));
+
+      document.querySelectorAll("p.sampleClass")[0].innerHTML =
+        "<span>I am a whole new element!</span>";
+      document.querySelectorAll("p.sampleClass")[0].innerHTML =
+        "<span>deleted</span>";
+
+      /*innerText will only reference the text displayed on the screen.
+        innerHTML will reference all HTML elements inside the tag. 
+        If we wanted to remove elements, we can do the same thing in reverse! 
+        Simply set the innerHTML to be blank and it will erase the contents.
+        */
+    </script>
+  </body>
+</html>
