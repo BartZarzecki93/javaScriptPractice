@@ -1,0 +1,22 @@
+/* For Testing */
+body {
+    background-color: yellowgreen;
+}
+
+#number-one{
+    color: red;
+}
+
+#number-two{
+    font-size: 10px;
+}
+#number-uno{
+    font-size: 30px;
+}
+.first-class{
+    color: green;
+}
+
+.second-class{
+    font-size: 24px;
+}

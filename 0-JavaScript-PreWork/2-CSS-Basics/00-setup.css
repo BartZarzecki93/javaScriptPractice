@@ -1,0 +1,7 @@
+body {
+    background-color: rgba(67, 62, 138, 0.767);
+}
+
+.wrapper {
+    border: 10px solid red;
+}
