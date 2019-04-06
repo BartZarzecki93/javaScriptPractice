@@ -47,12 +47,21 @@ document
       })
       .then(function(json) {
         let people1 = json.results;
-        //let people2 = json.results2
+        console.log(json.results2);
 
         for (a of people1) {
           let listItem2 = document.createElement("li");
-          listItem2.innerHTML = "<p>" + a.name + "   " + a.homeworld + "</p>";
+          listItem2.innerHTML =
+            "<p>" +
+            "  Name: " +
+            a.name +
+            "  Mass: " +
+            a.mass +
+            "  Home: " +
+            a.homeworld +
+            "</p>";
           starWarsPeopleList2.appendChild(listItem2);
+          console.log(a.homeworld);
         }
       });
   }); //changing background of the whole body to blue
