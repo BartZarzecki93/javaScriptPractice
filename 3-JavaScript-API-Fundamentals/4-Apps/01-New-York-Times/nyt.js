@@ -75,13 +75,6 @@ function displayResults(json) {
   } else {
     nav.style.display = "none"; //hides the nav display if less than 10 items are in the array
   }
-
-  /*if (articles.length) {
-    document.getElementById("back");
-  } else {
-    nav.style.display = "none";
-  }
-*/
   if (articles.length === 0) {
     console.log("No results");
   } else {
@@ -140,12 +133,13 @@ function previousPage(e) {
   fetchResults(e); //4
   console.log("Page:", pageNumber); //5
 }
-
+/*
 function myFunction() {
-  var x = document.getElementById("prev");
-  if (articles.length < 10) {
+  var x = document.getElementById("prev1");
+  if (pageNumber < 2) {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
 }
+*/
